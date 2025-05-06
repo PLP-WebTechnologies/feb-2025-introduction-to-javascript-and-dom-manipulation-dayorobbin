@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamiv HTML sample for TechFashy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #content {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #4c65af;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #8e3e3e;
+        }
+
+        #newElementContainer {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px dashed #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dynamic content TechFashy</h1>
+    </header>
+
+    <section id="content">
+        <p id="">This is the first content.</p>
+        <button id="changeTextButton">Change Text</button>
+        <button id="styleButton">Change Style</button>
+        <button id="addElementButton">Add Element</button>
+
+        <div id="newElementContainer">
+            <!-- New elements will be added here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Example.com</p>
+    </footer>
+
+    <script>
+        // Function to change text content
+        function changeText() {
+            document.getElementById("dynamicText").textContent = "The text just updated dynamically";
+        }
+
+        // Function to change style
+        function changeStyle() {
+            const contentSection = document.getElementById("content");
+            contentSection.style.backgroundColor = "#e0f7fa";
+            contentSection.style.border = "2px solid #80deea";
+        }
+
+        // Function to add a new element
+        function addElement() {
+            const newElement = document.createElement("p");
+            newElement.textContent = "This is a newly added paragraph!";
+            newElement.style.color = "green";
+
+            const container = document.getElementById("newElementContainer");
+            container.appendChild(newElement);
+        }
+
+        // Event listeners
+        document.getElementById("changeTextButton").addEventListener("click", changeText);
+        document.getElementById("styleButton").addEventListener("click", changeStyle);
+        document.getElementById("addElementButton").addEventListener("click", addElement);
+    </script>
+
+</body>
+</html>
